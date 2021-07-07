@@ -1,7 +1,6 @@
 doctype html
 html
-head
-    title #{title} 
-body
-    div#app #{data}
-    script(src='/bundle.js')
+    include includes/head.pug
+    body
+        div#app #{data}
+        script(async, defer, src='/bundle.js')

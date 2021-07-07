@@ -4,7 +4,10 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = [
   {
-    entry: './src/client/index.tsx',
+    entry: {
+      bundle: './src/client/index.tsx',
+      sw: './src/client/sw.ts',
+    },
     mode: 'development',
     module: {
       rules: [
@@ -19,7 +22,7 @@ module.exports = [
       extensions: ['.tsx', '.ts', '.js'],
     },
     output: {
-      filename: 'bundle.js',
+      filename: '[name].js',
       path: path.resolve(__dirname, 'dist/client'),
     },
   },
@@ -62,7 +65,10 @@ module.exports = [
         },
       }), // Dong
       new CopyPlugin({
-        patterns: [{ from: 'src/views', to: 'client/views' }],
+        patterns: [
+          { from: 'src/views', to: 'client/views' },
+          { from: 'src/client/pwa', to: 'client' },
+        ],
       }),
     ],
     output: {

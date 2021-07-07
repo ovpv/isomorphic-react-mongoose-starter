@@ -39,7 +39,7 @@ const HTML = (Comp: any) => {
     </Provider>
   );
   return {
-    title: '',
+    title: 'React Isomorphic App',
     data: output,
   };
 };

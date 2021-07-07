@@ -1,0 +1,21 @@
+{
+  "name": "React App PWA",
+  "short_name": "rPWA",
+  "theme_color": "#3b00ff",
+  "background_color": "#57c191",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "scope": "/",
+  "start_url": "/"
+}
